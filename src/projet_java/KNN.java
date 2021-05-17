@@ -3,19 +3,19 @@ package projet_java;
 
 public class KNN {
 	public static void main(String[] args) {
-		byte b1 = 40; // 00101000
-		byte b2 = 20; // 00010100
-		byte b3 = 10; // 00001010
-		byte b4 = 5; // 00000101
+	byte b1 = 40; // 00101000
+	byte b2 = 20; // 00010100
+	byte b3 = 10; // 00001010
+	byte b4 = 5; // 00000101
 
-		// [00101000 | 00010100 | 00001010 | 00000101] = 672401925
-		int result = extractInt(b1, b2, b3, b4);
-		System.out.println(result);
+	// [00101000 | 00010100 | 00001010 | 00000101] = 672401925
+	int result = extractInt(b1, b2, b3, b4);
+	System.out.println(result);
 
-		String bits = "10000001";
-		System.out.println("La séquence de bits " + bits + "\n\tinterprète comme byte non signé donne "
-				+ Helpers.interpretUnsigned(bits) + "\n\tinterprète comme byte signé donne "
-				+ Helpers.interpretSigned(bits));
+	String bits = "10000001";
+	System.out.println("La séquence de bits " + bits + "\n\tinterprète comme byte non signé donne "
+			+ Helpers.interpretUnsigned(bits) + "\n\tinterprète comme byte signé donne "
+			+ Helpers.interpretSigned(bits));
 	}
 
 
