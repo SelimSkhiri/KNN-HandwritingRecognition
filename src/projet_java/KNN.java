@@ -81,8 +81,8 @@ public class KNN {
         
 	for(int i = 0; i < height; i++) {       
 		for(int j = 0; j < width; j++) {
-              	  E += (a[i][j]-b[i][j])*(a[i][j]-b[i][j]);
-	       }}
+              		E += (a[i][j]-b[i][j])*(a[i][j]-b[i][j]);
+	    }}
 	return (E);
 	}	
 	
@@ -135,24 +135,24 @@ public class KNN {
         
         while ( l <= h) {
         	if (values[l] < pivot)
-                l++;
-             else if (values[h] > pivot)
-                h--;
-             else {
-                swap(l,h,values,indices);
-                l++;
-                h--;  
+                	l++;
+             	else if (values[h] > pivot)
+                	h--;
+             	else {
+                	swap(l,h,values,indices);
+                	l++;
+                	h--;  
         	}}
-            if (low<h)
-                quicksortIndices(values,indices,low,h);
-            if (high>l)
-                 quicksortIndices(values,indices,l,high);
-            return (indices);
+    	if (low<h)
+  		quicksortIndices(values,indices,low,h);
+     	if (high>l)
+       		quicksortIndices(values,indices,l,high);
+     	return (indices);
 	}
       
 
 	public static void swap(int i, int j, float[] values, int[] indices) {   
-		float aux1 = values[i];
+	float aux1 = values[i];
         int aux2   = indices[i];        
         values[i]  = values[j];
        	values[j]  = aux1;
@@ -162,10 +162,10 @@ public class KNN {
 
 	
 	public static int firstOcc(int[]array,int max) {
-	   for (int i = 0; i < array.length; i++) {
-		   if(array[i] == max)
-			   return (i);
-           }
+		for (int i = 0; i < array.length; i++) {
+			if(array[i] == max)
+				return (i);
+           	    }
        	return -1;
 	}
 	
@@ -178,11 +178,11 @@ public class KNN {
 		if (array[i] > max)
 			{ max = array[i];  
                     	pos = i;
-               	}}
-            if (firstOcc(array,max) != -1)
-            	return pos;
-            else
-            	return (firstOcc(array,max));
+     	    }}
+         	if (firstOcc(array,max) != -1)
+            		return pos;
+          	else
+            		return (firstOcc(array,max));
 	}
 
 
