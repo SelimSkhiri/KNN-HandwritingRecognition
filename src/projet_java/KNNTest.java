@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class KNNTest {
 	public static void main(String[] args) {
-	    extractIntTest();
-	    //parsingTest();
-	    //squaredEuclideanDistanceTest();
+	    	extractIntTest();
+	    	//parsingTest();
+	    	//squaredEuclideanDistanceTest();
 		invertedSimilarityTest();
-        quicksortTest();
-        indexOfMaxTest();
+       		quicksortTest();
+        	indexOfMaxTest();
 		electLabelTest();
 		knnClassifyTest();
 		accuracyTest();
@@ -51,16 +51,16 @@ public class KNNTest {
 		byte[][] a = new byte[][] {{1, 1}, {2, 2}};
 		byte[][] b = new byte[][] {{3, 3}, {4, 4}};
 
-		System.out.println("Distance calculée: " + KNN.squaredEuclideanDistance(a, b));
+		System.out.println("Distance calculÃ©e: " + KNN.squaredEuclideanDistance(a, b));
 		System.out.println("Distance attendue: 16.0");
 	}
 
 	public static void invertedSimilarityTest() {
-		System.out.println("=== Test similarité inversée ===");
+		System.out.println("=== Test similaritÃ© inversÃ©e ===");
 		byte[][] a = new byte[][] {{1, 1}, {1, 2}};
 		byte[][] b = new byte[][] {{50, 50}, {50, 100}};
 
-		System.out.println("Distance calculée: " + KNN.invertedSimilarity(a, b));
+		System.out.println("Distance calculÃ©e: " + KNN.invertedSimilarity(a, b));
 		System.out.println("Distance attendue: 0.0");
 	}
 
@@ -69,7 +69,7 @@ public class KNNTest {
 		float[] data = new float[] {3, 7, 0, 9};
 		int[] result = KNN.quicksortIndices(data);
 
-		System.out.println("Indices triés: " + Arrays.toString(result));
+		System.out.println("Indices triÃ©s: " + Arrays.toString(result));
 	}
 
 	public static void indexOfMaxTest() {
@@ -78,8 +78,8 @@ public class KNNTest {
 
 		int indexOfMax = KNN.indexOfMax(data);
 		System.out.println("Indices: [0, 1, 2, 3]");
-		System.out.println("Données: " + Arrays.toString(data));
-		System.out.println("L'indice de l'élément maximal est: " + indexOfMax);
+		System.out.println("DonnÃ©es: " + Arrays.toString(data));
+		System.out.println("L'indice de l'Ã©lÃ©ment maximal est: " + indexOfMax);
 	}
 
 
@@ -89,8 +89,8 @@ public class KNNTest {
 		byte[] labels = new byte[]{2, 1, 1, 2};
 		int k = 3;
 
-		System.out.println("étiquette votée: " + KNN.electLabel(sortedIndices, labels, k));
-		System.out.println("étiquette attendue: 2");
+		System.out.println("Ã©tiquette votÃ©e: " + KNN.electLabel(sortedIndices, labels, k));
+		System.out.println("Ã©tiquette attendue: 2");
 	}
 
 	public static void knnClassifyTest() {
@@ -110,13 +110,13 @@ public class KNNTest {
 
 
 	public static void accuracyTest() {
-		System.out.println("=== Test précision ===");
+		System.out.println("=== Test prÃ©cision ===");
 		byte[] a = new byte[] {1, 1, 1, 1};
 		byte[] b = new byte[] {1, 1, 1, 9};
 
 
-		System.out.println("Précision calculée: " + KNN.accuracy(a, b));
-		System.out.println("Précision attendue:  0.75");
+		System.out.println("PrÃ©cision calculÃ©e: " + KNN.accuracy(a, b));
+		System.out.println("PrÃ©cision attendue:  0.75");
 	}
 }
 
